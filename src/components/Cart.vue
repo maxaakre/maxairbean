@@ -1,7 +1,7 @@
 <template>
   <div class="cart">
     <h3>Din beställning</h3>
-    <CartItem v-for="(item,index) in cart" v-bind:key="index" v-bind:item="item" />
+    <Cartitem v-for="(item,index) in cart" v-bind:key="index" v-bind:item="item" />
     <div class="totalamount">
       <h3>
         Total
@@ -15,11 +15,11 @@
 </template>
 
 <script>
-import CartItem from "./CartItem";
+import Cartitem from "./Cartitem";
 export default {
   name: "Cart",
   components: {
-    CartItem,
+    Cartitem,
   },
   computed: {
     cart() {
